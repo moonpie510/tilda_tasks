@@ -1,0 +1,17 @@
+services:
+    app:
+        build: ./docker/php-fpm
+        container_name: tilda_php-fpm
+        restart: unless-stopped
+        working_dir: /var/www/tilda/site
+        volumes:
+            - ./docker/php-fpm/php.ini:/etc/php/8.3/fpm/conf.d/99-overrides.ini
+            - ./docker/php-fpm/php-fpm.conf:/etc/php/8.3/fpm/pool.d/z-overrides.conf
+            - ./docker/php-fpm/log:/var/log/php-fpm
+            - .:/var/www/tilda/site
+        networks:
+            - common
+
+networks:
+    common:
+        external: true

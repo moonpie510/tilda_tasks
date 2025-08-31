@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название компании</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script src="./scripts/index.js" type="module" defer></script>
+</head>
+<body>
+<header class="header">
+    <div class="header__container container">
+        <a href="#" class="header__logo">
+            <img src="./images/logo.svg" alt="" width="45" height="45"/>
+        </a>
+
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">Главная</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">О компании</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">Услуги</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__contacts">
+            <span class="header__city" id="currentCity">Москва</span>
+            <a href="#" class="header__phone">8-800-555-35-35</a>
+        </div>
+    </div>
+</header>
+
+<main class="content">
+    <div class="content__container container">
+        <h1 class="content__title">Lorem ipsum dolor sit amet consectetur adipiscing elit</h1>
+        <p class="content__text">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
+            In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
+            Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
+            Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+        </p><br>
+
+        <p class="content__text">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
+            In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
+            Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
+            Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+        </p>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__info">
+            <span class="footer__city" id="footerCity">Москва</span>
+            <a href="#" class="footer__phone">8-800-555-35-35</a>
+            <address class="footer__address">ул. Примерная, д. 123</address>
+        </div>
+    </div>
+</footer>
+
+<div class="modal" id="cityModal">
+    <div class="modal__content">
+        <button class="modal__close" id="closeModal">&times;</button>
+        <h2 class="modal__title">Выберите город</h2>
+
+        <label for="citySearch"></label>
+        <input type="text" class="modal__search" placeholder="Поиск города..." id="citySearch">
+
+        <div class="modal__cities" id="citiesList">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer__city {
+    font-size: 16px;
+}
+
+.footer__phone {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer__phone:hover {
+    color: #007bff;
+}
+
+.footer__address {
+    color: #ccc;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

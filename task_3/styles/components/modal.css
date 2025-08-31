@@ -1,0 +1,113 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal--show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal__content {
+    background-color: #fff;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+}
+
+.modal--show .modal__content {
+    transform: translateY(0);
+}
+
+.modal__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+}
+
+.modal__close:hover {
+    color: #333;
+}
+
+.modal__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.modal__cities {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.modal__city {
+    padding: 12px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: none;
+    font-size: 16px;
+    text-align: left;
+}
+
+.modal__city:hover {
+    border-color: #007bff;
+    background-color: #f8f9fa;
+}
+
+.modal__city--active {
+    border-color: #007bff;
+    background-color: #007bff;
+    color: white;
+}
+
+.modal__search {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.modal__search:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .modal__content {
+        margin: 20px;
+        padding: 20px;
+        width: calc(100% - 40px);
+    }
+}

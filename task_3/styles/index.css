@@ -1,0 +1,9 @@
+@import 'normalize.css';
+/*@import 'variables.css';*/
+@import 'globals.css';
+
+@import 'components/header.css';
+@import 'components/content.css';
+@import 'components/footer.css';
+@import 'components/modal.css';
+

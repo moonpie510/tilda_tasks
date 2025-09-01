@@ -11,12 +11,12 @@
 .content__title {
     font-size: 36px;
     margin-bottom: 30px;
-    color: #333;
+    color: var(--color-black);
 }
 
 .content__text {
     font-size: 18px;
-    color: #666;
+    color: var(--color-gray);
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
